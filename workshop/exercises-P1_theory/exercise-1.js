@@ -51,7 +51,7 @@ console.log(`Answer 1-2 ${func1_2(3)}`);
 
 // 1-3
 duplicateString(reverseString("hello"));
-
+//I had no alternative for the code in these functions, I did not repeat them here
 //First we take "hello" and reverse it in "olleh"
 //Then it duplicates and concatenate itself "olleholleh"
 
@@ -61,7 +61,7 @@ console.log(
 
 // 1-4
 reverseString(duplicateString(duplicateString("foo")));
-
+//I had no alternative for the code in these functions, I did not repeat them here
 //We first take our string and duplicate it / concatenate to itself ("foofoo")
 //Then we take this result and duplicate it / concatenate to itself ("foofoofoofoo")
 //And we take the previous result and reverse it ("oofoofoofoof")
