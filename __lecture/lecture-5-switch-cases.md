@@ -26,11 +26,11 @@ Switch statements can be thought of as _syntactic sugar_. There are no significa
 ```js
 switch (time) {
   case 6:
-    console.log('Wake up!');
+    console.log("Wake up!");
     alarm();
     break;
   case 22:
-    console.log('off to bed');
+    console.log("off to bed");
     turnOffComputer();
     break;
   default:
@@ -59,14 +59,29 @@ Convert the following if/else to use `switch`
 ```js
 // Exercise 1
 function getFavouriteFoodEmoji(food) {
-  if (food === 'hamburger') {
-    return '🍔';
-  } else if (food === 'sushi') {
-    return '🍣';
-  } else if (food === 'lobster') {
-    return '🦞';
-  } else if (food === 'pizza') {
-    return '🍕';
+  if (food === "hamburger") {
+    return "🍔";
+  } else if (food === "sushi") {
+    return "🍣";
+  } else if (food === "lobster") {
+    return "🦞";
+  } else if (food === "pizza") {
+    return "🍕";
+  }
+}
+
+function getFavouriteFoodEmoji2(food) {
+  switch (food) {
+    case "hamburger":
+      return "🍔";
+    case "sushi":
+      return "🍣";
+    case "lobster":
+      return "🦞";
+    case "pizza":
+      return "🍕";
+    default:
+      return "Oops I couldn't find that one.";
   }
 }
 ```
@@ -76,16 +91,16 @@ function getFavouriteFoodEmoji(food) {
 ```js
 // Exercise 2
 function calculator(num1, num2, operation) {
-  if (operation === 'add') {
+  if (operation === "add") {
     return num1 + num2;
-  } else if (operation === 'subtract') {
+  } else if (operation === "subtract") {
     return num1 - num2;
-  } else if (operation === 'multiply') {
+  } else if (operation === "multiply") {
     return num1 * num2;
-  } else if (operation === 'divide') {
+  } else if (operation === "divide") {
     return num1 / num2;
   } else {
-    console.error('Unrecognized operation: ', operation);
+    console.error("Unrecognized operation: ", operation);
     return null;
   }
 }
@@ -97,11 +112,11 @@ function calculator(num1, num2, operation) {
 // Exercise 3
 function greetUser(hourOfDay) {
   if (hourOfDay <= 11) {
-    console.log('Good morning');
+    console.log("Good morning");
   } else if (hourOfDay < 6) {
-    console.log('Good afternoon');
+    console.log("Good afternoon");
   } else {
-    console.log('Good evening');
+    console.log("Good evening");
   }
 }
 ```
