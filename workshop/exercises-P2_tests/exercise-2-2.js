@@ -8,16 +8,27 @@
 // - If it's a number, return `undefined`
 
 function lastCharacter(str) {
-  // Your code here
+  if (typeof str == "number") {
+    str = str.toString();
+  }
+  if (str.slice(str.length - 1) !== "") {
+    return str.slice(str.length - 1);
+  } else return undefined;
 }
 
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
 // conditions specified above (don't forget empty string and number!!)
 
-expect(lastCharacter('max'), 'x');
+expect(lastCharacter("max"), "x");
 
 // Add 4 more test cases here!
+
+expect(lastCharacter("Peter"), "r");
+expect(lastCharacter(""), undefined);
+expect(lastCharacter("1000"), "0");
+expect(lastCharacter(1000), "0");
+
 // 🌠 NOTE 🌠
 // Be creative with your tests!
 // There's an old joke about QA (Quality Assurance) testers:
@@ -34,7 +45,7 @@ expect(lastCharacter('max'), 'x');
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }
