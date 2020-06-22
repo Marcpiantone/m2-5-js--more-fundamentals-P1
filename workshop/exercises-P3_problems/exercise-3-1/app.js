@@ -11,7 +11,7 @@
 
 const button = document.querySelector("ul");
 
-// for button 4 we should add a .jitters class
+// for button 4 we should add a jitters class
 
 let myAnimations = function (event) {
   const buttonId = event.target.id;
